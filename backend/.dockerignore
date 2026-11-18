@@ -1,0 +1,93 @@
+# Build artifacts
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# Local environment
+.env
+.env.*
+**/.env
+**/.env.*
+.venv/
+
+# Session and vector data live in runtime volumes.
+**/*.db
+**/*.db-*
+**/*.sqlite*
+data/processed/chroma*/
+data/processed/chunks/
+data/processed/question_bank/
+data/processed/retrieval_logs*.jsonl
+
+# Git history
+.git/
+.gitignore
+
+# Editor/IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Node / ruflo
+node_modules/
+package.json
+package-lock.json
+ruvector.db
+.claude-flow/
+.claude/
+
+# Source PDFs (already chunked into ChromaDB; don't reship)
+data/raw/textbooks/
+data/raw/physics/
+
+# Eval artifacts not needed at runtime
+evaluation/results/
+evaluation/test_sets/
+docs/
+
+# Old deliverables
+*.zip
+*.docx
+NLP_MILE_1.pdf
+socratic_ot_phase1_report.docx
+graph.zip
+Milestone_1_*.zip
+
+# Plans
+docs/superpowers/
+
+# Tests don't ship to prod
+test_*.py
+**/test_*.py
+
+# E2E test drivers (run against a live backend, not imported at runtime)
+run_e2e_tests.py
+run_e2e_tests_lite.py
+run_e2e_physics.py
+
+# Eval scripts (standalone; not imported by api/ or graph/)
+evaluation/
+
+# NOTE: Do NOT exclude ingest/ — retrieval/crag.py imports
+# ingest.vector_store and ingest.reranker at runtime. Excluding the
+# whole directory broke retrieval on Render (CRAG returned FAILED).
+# The actual one-time ingest scripts (parse_pdf.py, late_chunker.py,
+# run_ingest_pipeline.py, run_metadata_pipeline.py, add_*.py,
+# metadata_builder.py) ship in the image but are simply never invoked.
+# If image size becomes a concern, exclude those individual files only.
+
+# Legacy Streamlit UI (replaced by Next.js frontend)
+frontend_legacy/
+
+# Data-download helper (PDFs already chunked; not needed at runtime)
+download_data.py
+
+# Test artifacts and reports
+test.md
+thinking_logs.jsonl
+
+# Dev-only mem0 scratch
+mem0_test_*.py

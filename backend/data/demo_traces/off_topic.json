@@ -1,0 +1,81 @@
+{
+  "id": "off_topic",
+  "label": "Out-of-scope CRAG INCORRECT \u2192 redirect",
+  "input": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "What's the best restaurant in Buffalo?"
+      }
+    ],
+    "session_id": "30326d22-fc61-48f6-a58b-90e1a43300ac",
+    "mode": "socratic"
+  },
+  "primes": [],
+  "events": [
+    {
+      "event": "trace",
+      "step": "concept_extraction",
+      "input": {
+        "session_id": "30326d22-fc61-48f6-a58b-90e1a43300ac",
+        "domain": "OT_anatomy",
+        "mode": "socratic"
+      },
+      "output": {
+        "current_concept": "",
+        "discovery_target": "",
+        "topic_choice": "",
+        "dean_revisions": 0,
+        "dean_revision_instruction": "",
+        "student_phase": "learning"
+      },
+      "duration_ms": 701,
+      "model": "haiku"
+    },
+    {
+      "event": "trace",
+      "step": "retrieval",
+      "input": {
+        "session_id": "30326d22-fc61-48f6-a58b-90e1a43300ac",
+        "domain": "OT_anatomy",
+        "mode": "socratic",
+        "current_concept": "What's the best restaurant in Buffalo?"
+      },
+      "output": {
+        "chunk_sources": [],
+        "crag_decision": "INCORRECT",
+        "chunks_for_concept": "What's the best restaurant in Buffalo?"
+      },
+      "duration_ms": 1084
+    },
+    {
+      "event": "state",
+      "state": {
+        "session_id": "30326d22-fc61-48f6-a58b-90e1a43300ac",
+        "domain": "OT_anatomy",
+        "turn_count": 1,
+        "current_concept": "",
+        "retrieved_chunks": [],
+        "chunk_sources": [],
+        "chunks_for_concept": "What's the best restaurant in Buffalo?",
+        "dean_revisions": 0,
+        "draft_response": "Ha \u2014 I'm an OT and anatomy tutor, so I'm probably not your best guide on Buffalo dining! \ud83d\ude0a \n\nBut I'm here if you'd like to dig into some anatomy or neuroscience for your NBCOT prep. What brings you in today \u2014 is there a particular structure, nerve, pathway, or movement concept that's been giving you trouble, or are you just getting started and want to explore?",
+        "dean_revision_instruction": "",
+        "crag_decision": "INCORRECT",
+        "student_phase": "learning",
+        "topic_choice": "",
+        "discovery_target": "",
+        "draft_source_node": "rapport_node",
+        "mode": "socratic"
+      }
+    },
+    {
+      "event": "response",
+      "response": "Ha \u2014 I'm an OT and anatomy tutor, so I'm probably not your best guide on Buffalo dining! \ud83d\ude0a \n\nBut I'm here if you'd like to dig into some anatomy or neuroscience for your NBCOT prep. What brings you in today \u2014 is there a particular structure, nerve, pathway, or movement concept that's been giving you trouble, or are you just getting started and want to explore?"
+    },
+    {
+      "event": "done"
+    }
+  ],
+  "event_count": 5
+}

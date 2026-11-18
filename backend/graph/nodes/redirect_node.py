@@ -1,0 +1,82 @@
+"""
+graph/nodes/redirect_node.py
+
+Redirect generator for off-topic student messages.
+Called when: classifier_output == "irrelevant".
+
+Acknowledges the off-topic message briefly, then bridges back to the
+current anatomy concept with a Socratic question.
+
+The Dean node checks this draft before delivery (absolute rule).
+
+Model: PRIMARY_MODEL (claude-sonnet-4-5)
+Input:  current_concept, turn_count, messages, dean_revision_instruction
+Output: state["draft_response"]
+"""
+
+from graph._llm_client import Anthropic
+
+import config
+from graph.state import GraphState
+from graph.nodes._helpers import (
+    load_prompt,
+    log_thinking,
+    msg_text,
+    strip_thinking_block,
+)
+
+_client = Anthropic()
+
+
+def _extract_last_student_message(messages) -> str:
+    """Return the most recent human message — the off-topic message to redirect from."""
+    for msg in reversed(messages):
+        if msg.type == "human":
+            return msg_text(msg.content)
+    return "(no student message found)"
+
+
+def redirect_node(state: GraphState) -> dict:
+    concept = state.get("current_concept", "")
+    turn_count = state.get("turn_count", 0)
+
+    messages = state.get("messages", [])
+    student_message = _extract_last_student_message(messages)
+
+    prompt = load_prompt("redirect.txt").format(
+        current_concept=concept,
+        student_message=student_message,
+        turn_count=turn_count,
+    )
+
+    # On revision pass, inject Dean's instruction as a system message
+    revision_instruction = state.get("dean_revision_instruction", "")
+    system_msg = (
+        f"REVISION REQUIRED: {revision_instruction}\n"
+        "Fix the issue above and rewrite the response."
+        if revision_instruction
+        else None
+    )
+
+    api_kwargs: dict = dict(
+        model=config.PRIMARY_MODEL,
+        max_tokens=config.REDIRECT_MAX_TOKENS,
+        messages=[{"role": "user", "content": prompt}],
+    )
+    if system_msg:
+        api_kwargs["system"] = system_msg
+
+    response = _client.messages.create(**api_kwargs)
+    raw = response.content[0].text
+    draft, thinking = strip_thinking_block(raw)
+    log_thinking(
+        thinking,
+        node="redirect_node",
+        session_id=state.get("session_id", ""),
+        turn_count=turn_count,
+        concept=concept,
+        classifier_output=state.get("classifier_output", ""),
+        reveal_permitted=False,
+    )
+
+    return {"draft_response": draft, "draft_source_node": "redirect_node"}

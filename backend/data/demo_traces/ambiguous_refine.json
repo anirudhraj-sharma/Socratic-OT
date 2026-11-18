@@ -1,0 +1,92 @@
+{
+  "id": "ambiguous_refine",
+  "label": "CRAG AMBIGUOUS \u2192 refinement",
+  "input": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Tell me about nerves"
+      }
+    ],
+    "session_id": "a461e7b1-6c4e-4248-8251-97e314f39306",
+    "mode": "socratic"
+  },
+  "primes": [],
+  "events": [
+    {
+      "event": "trace",
+      "step": "concept_extraction",
+      "input": {
+        "session_id": "a461e7b1-6c4e-4248-8251-97e314f39306",
+        "domain": "OT_anatomy",
+        "mode": "socratic"
+      },
+      "output": {
+        "current_concept": "",
+        "discovery_target": "",
+        "topic_choice": "",
+        "dean_revisions": 0,
+        "dean_revision_instruction": "",
+        "student_phase": "learning"
+      },
+      "duration_ms": 2056,
+      "model": "haiku"
+    },
+    {
+      "event": "trace",
+      "step": "retrieval",
+      "input": {
+        "session_id": "a461e7b1-6c4e-4248-8251-97e314f39306",
+        "domain": "OT_anatomy",
+        "mode": "socratic",
+        "current_concept": "Tell me about nerves"
+      },
+      "output": {
+        "chunk_sources": [
+          "OT_anatomy_ch14_sec0231_lc_001",
+          "OT_anatomy_ch16_sec0263_lc_000",
+          "OT_anatomy_ch14_sec0231_lc_000"
+        ],
+        "crag_decision": "AMBIGUOUS",
+        "chunks_for_concept": "Tell me about nerves"
+      },
+      "duration_ms": 3506
+    },
+    {
+      "event": "state",
+      "state": {
+        "session_id": "a461e7b1-6c4e-4248-8251-97e314f39306",
+        "domain": "OT_anatomy",
+        "turn_count": 1,
+        "current_concept": "",
+        "retrieved_chunks": [
+          "Once any sensory cell transduces a stimulus into a nerve impulse, that impulse has to travel along axons to reach the CNS. In many of the special senses, the axons leaving the sensory receptors have a topographical arrangement, meaning that the location of the sensory receptor relates to the location of the axon in the nerve. For example, in the retina, axons from RGCs in the fovea are located at the center of the optic nerve, where they are surrounded by axons from the more peripheral RGCs. Spinal Nerves Generally, spinal nerves contain afferent axons from sensory receptors in the periphery, such as from the skin, mixed with efferent axons travelling to the muscles or other effector organs. As the spinal nerve nears the spinal cord, it splits into dorsal and ventral roots. The dorsal root contains only the axons of sensory neurons, whereas the ventral roots contain only the axons of the motor neurons. Some of the branches will synapse with local neurons in the dorsal root ganglion, posterior (dorsal) horn, or even the anterior (ventral) horn, at the level of the spinal cord where they enter. Other branches will travel a short distance up or down the spine to interact with neurons at other levels of the spinal cord. A branch may also turn into the posterior (dorsal) column of the white matter to connect with the brain. For the sake of convenience, we will use the terms ventral and dorsal in reference to structures within the spinal cord that are part of these pathways. This will help to underscore the relationships between the different components. Typically, spinal nerve systems that connect to the brain are contralateral , in that the right side of the body is connected to the left side of the brain and the left side of the body to the right side of the brain. Cranial Nerves Cranial nerves convey specific sensory information from the head and neck directly to the brain. Whereas spinal information is contralateral, cranial nerve systems, with some exceptions, are mostly ipsilateral , meaning that a cranial nerve on the right side of the head is connected to the right side of the brain. Some cranial nerves contain only sensory axons, such as the olfactory, optic, and vestibulocochlear nerves. Other cranial nerves contain both sensory and motor axons, including the trigeminal, facial, glossopharyngeal, and vagus nerves (however, the vagus nerve is not associated with the somatic nervous system). The general senses of somatosensation for the face travel through the trigeminal system.",
+          "The olfactory, optic, and vestibulocochlear nerves (cranial nerves I, II, and VIII) are dedicated to four of the special senses: smell, vision, equilibrium, and hearing, respectively. Taste sensation is relayed to the brain stem through fibers of the facial and glossopharyngeal nerves. The trigeminal nerve is a mixed nerve that carries the general somatic senses from the head, similar to those coming through spinal nerves from the rest of the body. Testing smell is straightforward, as common smells are presented to one nostril at a time. The patient should be able to recognize the smell of coffee or mint, indicating the proper functioning of the olfactory system. Loss of the sense of smell is called anosmia and can be lost following blunt trauma to the head or through aging. The short axons of the first cranial nerve regenerate on a regular basis. The neurons in the olfactory epithelium have a limited life span, and new cells grow to replace the ones that die off. The axons from these neurons grow back into the CNS by following the existing axons\u2014representing one of the few examples of such growth in the mature nervous system. If all of the fibers are sheared when the brain moves within the cranium, such as in a motor vehicle accident, then no axons can find their way back to the olfactory bulb to re-establish connections. If the nerve is not completely severed, the anosmia may be temporary as new neurons can eventually reconnect. Olfaction is not the pre-eminent sense, but its loss can be quite detrimental. The enjoyment of food is largely based on our sense of smell. Anosmia means that food will not seem to have the same taste, though the gustatory sense is intact, and food will often be described as being bland. However, the taste of food can be improved by adding ingredients (e.g., salt) that stimulate the gustatory sense. Testing vision relies on the tests that are common in an optometry office. The Snellen chart ( Figure 16.7 ) demonstrates visual acuity by presenting standard Roman letters in a variety of sizes. The result of this test is a rough generalization of the acuity of a person based on the normal accepted acuity, such that a letter that subtends a visual angle of 5 minutes of an arc at 20 feet can be seen. To have 20/60 vision, for example, means that the smallest letters that a person can see at a 20-foot distance could be seen by a person with normal acuity from 60 feet away. Testing the extent of the visual field means that the examiner can establish the boundaries of peripheral vision as simply as holding their hands out to either side and asking the patient when the fingers are no longer visible without moving the eyes to track them. If it is necessary, further tests can establish the perceptions in the visual fields. Physical inspection of the optic disk, or where the optic nerve emerges from the eye, can be accomplished by looking through the pupil with an ophthalmoscope. The optic nerves from both sides enter the cranium through the respective optic canals and meet at the optic chiasm at which fibers sort such that the two halves of the visual field are processed by the opposite sides of the brain. Deficits in visual field perception often suggest damage along the length of the optic pathway between the orbit and the diencephalon. For example, loss of peripheral vision may be the result of a pituitary tumor pressing on the optic chiasm ( Figure 16.8 ). The pituitary, seated in the sella turcica of the sphenoid bone, is directly inferior to the optic chiasm. The axons that decussate in the chiasm are from the medial retinae of either eye, and therefore carry information from the peripheral visual field. The vestibulocochlear nerve (CN VIII) carries both equilibrium and auditory sensations from the inner ear to the medulla. Though the two senses are not directly related, anatomy is mirrored in the two systems. Problems with balance, such as vertigo, and deficits in hearing may both point to problems with the inner ear. Within the petrous region of the temporal bone is the bony labyrinth of the inner ear. The vestibule is the portion for equilibrium, composed of the utricle, saccule, and the three semicircular canals. The cochlea is responsible for transducing sound waves into a neural signal. The sensory nerves from these two structures travel side-by-side as the vestibulocochlear nerve, though they are really separate divisions. They both emerge from the inner ear, pass through the internal auditory meatus, and synapse in nuclei of the superior medulla. Though they are part of distinct sensory systems, the vestibular nuclei and the cochlear nuclei are close neighbors with adjacent inputs. Deficits in one or both systems could occur from damage that encompasses structures close to both. Damage to structures near the two nuclei can result in deficits to one or both systems. Balance or hearing deficits may be the result of damage to the middle or inner ear structures. M\u00e9ni\u00e8re's disease is a disorder that can affect both equilibrium and audition in a variety of ways. The patient can suffer from vertigo, a low- frequency ringing in the ears, or a loss of hearing. From patient to patient, the exact presentation of the disease can be different. Additionally, within a single patient, the symptoms and signs may change as the disease progresses. Use of the neurological exam subtests for the vestibulocochlear nerve illuminates the changes a patient may go through. The disease appears to be the result of accumulation, or over-production, of fluid in the inner ear, in either the vestibule or cochlea. Tests of equilibrium are important for coordination and gait and are related to other aspects of the neurological exam. The vestibulo-ocular reflex involves the cranial nerves for gaze control. Balance and equilibrium, as tested by the Romberg test, are part of spinal and cerebellar processes and involved in those components of the neurological exam, as discussed later. Hearing is tested by using a tuning fork in a couple of different ways. The Rinne test involves using a tuning fork to distinguish between conductive hearing and sensorineural hearing . Conductive hearing relies on vibrations being conducted through the ossicles of the middle ear. Sensorineural hearing is the transmission of sound stimuli through the neural components of the inner ear and cranial nerve. A vibrating tuning fork is placed on the mastoid process and the patient indicates when the sound produced from this is no longer present. Then the fork is immediately moved to just next to the ear canal so the sound travels through the air. If the sound is not heard through the ear, meaning the sound is conducted better through the temporal bone than through the ossicles, a conductive hearing deficit is present. The Weber test also uses a tuning fork to differentiate between conductive versus sensorineural hearing loss. In this test, the tuning fork is placed at the top of the skull, and the sound of the tuning fork reaches both inner ears by travelling through bone. In a healthy patient, the sound would appear equally loud in both ears. With unilateral conductive hearing loss, however, the tuning fork sounds louder in the ear with hearing loss. This is because the sound of the tuning fork has to compete with background noise coming from the outer ear, but in conductive hearing loss, the background noise is blocked in the damaged ear, allowing the tuning fork to sound relatively louder in that ear. With unilateral sensorineural hearing loss, however, damage to the cochlea or associated nervous tissue means that the tuning fork sounds quieter in that ear. The trigeminal system of the head and neck is the equivalent of the ascending spinal cord systems of the dorsal column and the spinothalamic pathways. Somatosensation of the face is conveyed along the nerve to enter the brain stem at the level of the pons. Synapses of those axons, however, are distributed across nuclei found throughout the brain stem. The mesencephalic nucleus processes proprioceptive information of the face, which is the movement and position of facial muscles. It is the sensory component of the jaw-jerk reflex , a stretch reflex of the masseter muscle. The chief nucleus, located in the pons, receives information about light touch as well as proprioceptive information about the mandible, which are both relayed to the thalamus and, ultimately, to the postcentral gyrus of the parietal lobe. The spinal trigeminal nucleus, located in the medulla, receives information about crude touch, pain, and temperature to be relayed to the thalamus and cortex. Essentially, the projection through the chief nucleus is analogous to the dorsal column pathway for the body, and the projection through the spinal trigeminal nucleus is analogous to the spinothalamic pathway. Subtests for the sensory component of the trigeminal system are the same as those for the sensory exam targeting the spinal nerves. The primary sensory subtest for the trigeminal system is sensory discrimination. A cotton-tipped applicator, which is cotton attached to the end of a thin wooden stick, can be used easily for this. The wood of the applicator can be snapped so that a pointed end is opposite the soft cotton-tipped end. The cotton end provides a touch stimulus, while the pointed end provides a painful, or sharp, stimulus. While the patient\u2019s eyes are closed, the examiner touches the two ends of the applicator to the patient\u2019s face, alternating randomly between them. The patient must identify whether the stimulus is sharp or dull. These stimuli are processed by the trigeminal system separately. Contact with the cotton tip of the applicator is a light touch, relayed by the chief nucleus, but contact with the pointed end of the applicator is a painful stimulus relayed by the spinal trigeminal nucleus. Failure to discriminate these stimuli can localize problems within the brain stem. If a patient cannot recognize a painful stimulus, that might indicate damage to the spinal trigeminal nucleus in the medulla. The medulla also contains important regions that regulate the cardiovascular, respiratory, and digestive systems, as well as being the pathway for ascending and descending tracts between the brain and spinal cord. Damage, such as a stroke, that results in changes in sensory discrimination may indicate these unrelated regions are affected as well."
+        ],
+        "chunk_sources": [
+          "OT_anatomy_ch14_sec0231_lc_001",
+          "OT_anatomy_ch16_sec0263_lc_000",
+          "OT_anatomy_ch14_sec0231_lc_000"
+        ],
+        "chunks_for_concept": "Tell me about nerves",
+        "dean_revisions": 0,
+        "draft_response": "Nice! Nerves are such a crucial piece of OT practice\u2014they're everywhere in how our clients move, feel, and interact with their world.\n\nWhen you say \"nerves,\" are you thinking about a specific nerve you've been wrestling with (like one that shows up in a case), or are you more curious about how the nervous system is *organized* and what different parts do?",
+        "dean_revision_instruction": "",
+        "crag_decision": "AMBIGUOUS",
+        "student_phase": "learning",
+        "topic_choice": "",
+        "discovery_target": "",
+        "draft_source_node": "rapport_node",
+        "mode": "socratic"
+      }
+    },
+    {
+      "event": "response",
+      "response": "Nice! Nerves are such a crucial piece of OT practice\u2014they're everywhere in how our clients move, feel, and interact with their world.\n\nWhen you say \"nerves,\" are you thinking about a specific nerve you've been wrestling with (like one that shows up in a case), or are you more curious about how the nervous system is *organized* and what different parts do?"
+    },
+    {
+      "event": "done"
+    }
+  ],
+  "event_count": 5
+}

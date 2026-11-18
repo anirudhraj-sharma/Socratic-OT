@@ -1,0 +1,85 @@
+# Python
+__pycache__/
+.venv/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+build/
+*.egg
+.eggs/
+
+# Environment
+.env
+.env.*
+*.env.local
+!.env.example
+
+# Raw textbooks and generated data
+backend/data/raw/textbooks/
+backend/data/raw/physics/
+chroma*/
+backend/data/processed/chunks/
+backend/data/processed/question_bank/
+backend/data/processed/retrieval_logs*.jsonl
+
+# Per-generation CoT corpus (grows unbounded; keep local-only).
+# Use evaluation/results/ for any aggregated analysis worth committing.
+backend/data/processed/thinking_logs.jsonl
+
+# Generated end-to-end test reports
+/test.md
+/test_lite.md
+/test_physics.md
+
+# Local databases and SQLite sidecars
+*.db
+*.db-journal
+*.db-shm
+*.db-wal
+*.sqlite*
+
+# Commit: data/raw/diagrams/ (small PNGs for VLM demo)
+#         data/raw/ot_specific/ (OT supplement text)
+#         data/processed/concept_tags.json
+#         data/processed/diagram_chunk_links.json
+
+# Keep results placeholder
+!evaluation/results/.gitkeep
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Node.js output
+node_modules/
+dist/
+out/
+.next/
+
+# Local tooling manifests
+package.json
+package-lock.json
+!frontend/package.json
+!frontend/package-lock.json
+.claude-flow/
+.swarm/
+
+# Archives and old deliverables
+*.zip
+*.docx
+*.pdf
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Local tooling state
+.claude/
+
+# Superpowers brainstorm docs (internal tooling)
+docs/superpowers/
